@@ -1,0 +1,59 @@
+﻿<Window x:Class="WPF_Aplikacija.Igraliste"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Aplikacija"
+        mc:Ignorable="d"
+        Title="Igraliste" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Slike/Teren.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button
+            x:Name="Zatvori"
+            Width="50"
+            Height="20"
+            FontWeight="Bold"
+            Grid.Column="7"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="5"
+            Background="ForestGreen"
+            Click="Zatvori_Click">
+            <Button.Effect>
+                <DropShadowEffect
+                    BlurRadius="15" 
+                    ShadowDepth="6" 
+                    Color="LightGray"/>
+            </Button.Effect>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+            Zatvori
+        </Button>
+        
+        <StackPanel x:Name="stackGKDomaci" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="10"/>
+        <StackPanel x:Name="stackDefDomaci" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="10"/>
+        <StackPanel x:Name="stackMidDomaci" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+        <StackPanel x:Name="stackFowDomaci" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+        <StackPanel x:Name="stackFowGosti" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+        <StackPanel x:Name="stackMidGosti" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+        <StackPanel x:Name="stackDefGosti" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+        <StackPanel x:Name="stackGKGosti" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Stretch"  Margin="10"/>
+
+    </Grid>
+</Window>
